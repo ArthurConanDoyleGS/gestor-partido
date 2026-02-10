@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gestor de Partido</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+<header>
+    <h1>Gestor de Partido Amistoso</h1>
+</header>
+
+<main>
+
+    <!-- MARCADOR -->
+    <section id="marcador">
+        <h2>Marcador</h2>
+
+        <div class="marcador-contenedor">
+            <article class="equipo">
+                <h3>Local</h3>
+                <p id="golesLocal">0</p>
+                <button id="btnLocal" aria-label="Sumar un gol al equipo local">+1 gol</button>
+            </article>
+
+            <article class="equipo">
+                <h3>Visitante</h3>
+                <p id="golesVisitante">0</p>
+                <button id="btnVisitante" aria-label="Sumar un gol al equipo visitante">+1 gol</button>
+            </article>
+        </div>
+
+        <button id="btnReset" class="reset">Reiniciar marcador</button>
+    </section>
+
+    <!-- ESTADO -->
+    <section id="estado">
+        <h2>Estado del partido</h2>
+        <p id="mensaje" aria-live="polite">El partido aún no ha comenzado</p>
+    </section>
+
+    <!-- REGISTRO DE GOLES -->
+    <section id="registro">
+        <h2>Registro de goles</h2>
+        <ul id="listaGoles"></ul>
+    </section>
+
+    <!-- JUGADORES -->
+    <section id="jugadores">
+        <h2>Jugadores</h2>
+
+        <form id="formJugador">
+            <label for="nombreJugador">Nombre del jugador</label>
+            <input type="text" id="nombreJugador" placeholder="Introduce un nombre">
+            <button type="submit">Añadir</button>
+        </form>
+
+        <div id="msgJugadores" aria-live="polite"></div>
+
+        <ul id="listaJugadores"></ul>
+    </section>
+
+</main>
+
+<footer>
+    <p>Club Deportivo · Partido amistoso</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
